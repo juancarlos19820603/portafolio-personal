@@ -6,6 +6,7 @@ import {Banner} from './components/Banner'
 import { Skills } from './components/Skills';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Projects } from './components/Projects';
+import { ProjectCard } from './components/ProjectCard';
 import React, { useRef } from 'react';
 
 
@@ -16,6 +17,7 @@ function App() {
       <Banner/>
       <Skills/>
       <Projects/>
+      <ProjectCard/>
 
     </div>
   );
