@@ -1,5 +1,5 @@
 import { Col, Row, Alert } from "react-bootstrap";
-import { useState, useEffect, e } from "react";
+import { useState, useEffect} from "react";
 
 export const  Newsletter = ({onValidated, status, message})=>{
     const [email, setEmail] = useState('');
@@ -9,6 +9,7 @@ export const  Newsletter = ({onValidated, status, message})=>{
     }, [status])
 
     const handleSubmit =()=>{
+        // eslint-disable-next-line no-undef
         e.preventDefault();
         email &&
         email.indexOf("@")> -1 &&
