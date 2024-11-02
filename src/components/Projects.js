@@ -69,10 +69,21 @@ export const Projects = () => {
             </Row>
         </Tab.Pane>
         <Tab.Pane eventKey="second"> Lorem Ipsum 
-
+        <Row>
+                {projects.map((project, index) => (
+                    <ProjectCard key={index} {...project} />
+                ))}
+            </Row>
             
         </Tab.Pane>
-        <Tab.Pane eventKey="third">Lorem Ipsum </Tab.Pane>
+        <Tab.Pane eventKey="third">Lorem Ipsum
+        <Row>
+                {projects.map((project, index) => (
+                    <ProjectCard key={index} {...project} />
+                ))}
+            </Row>
+             </Tab.Pane>
+
     </Tab.Content>
 </Tab.Container>
 
