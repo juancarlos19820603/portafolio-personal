@@ -23,21 +23,7 @@ export const Projects = () => {
             description: "Design & Development",
             imgUrl: projImg3
         },
-        {
-            title: "Business Startups",
-            description: "Design & Development",
-            imgUrl: projImg1
-        },
-        {
-            title: "Business Startups",
-            description: "Design & Development",
-            imgUrl: projImg2
-        },
-        {
-            title: "Business Startups",
-            description: "Design & Development",
-            imgUrl: projImg3
-        }
+    
     ];
     
 
@@ -68,7 +54,7 @@ export const Projects = () => {
                 ))}
             </Row>
         </Tab.Pane>
-        <Tab.Pane eventKey="second"> Lorem Ipsum 
+        <Tab.Pane eventKey="second"> 
         <Row>
                 {projects.map((project, index) => (
                     <ProjectCard key={index} {...project} />
@@ -76,7 +62,7 @@ export const Projects = () => {
             </Row>
             
         </Tab.Pane>
-        <Tab.Pane eventKey="third">Lorem Ipsum
+        <Tab.Pane eventKey="third">
         <Row>
                 {projects.map((project, index) => (
                     <ProjectCard key={index} {...project} />
