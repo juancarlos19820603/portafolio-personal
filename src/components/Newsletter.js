@@ -1,4 +1,4 @@
-import { Col, Row, Alert } from "react-bootstrap";
+/*import { Col, Row, Alert } from "react-bootstrap";
 import { useState, useEffect} from "react";
 
 export const  Newsletter = ({onValidated, status, message})=>{
@@ -45,3 +45,4 @@ export const  Newsletter = ({onValidated, status, message})=>{
         </Col>
     )
 }
+    */

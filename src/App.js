@@ -8,8 +8,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Projects } from './components/Projects';
 import { ProjectCard } from './components/ProjectCard';
 import { Contact } from './components/Contact';
-import { MailchimpForm } from './components/MailChimpForm';
+/*import { MailchimpForm } from './components/MailChimpForm';*/
 import React, { useRef } from 'react';
+import { Footer } from './components/Footer';
 
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
       <Projects/>
       <ProjectCard/>
       <Contact/>
-      <MailchimpForm/>
+      <Footer/>
+ 
 
     </div>
   );

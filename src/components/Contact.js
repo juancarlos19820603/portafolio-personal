@@ -20,25 +20,16 @@ export const Contact =()=>{
         [category]: value
       })
     }
-        const handleSubmit = async (e)=>{
-            e.preventDeafult();
-            setButtonText('Sending...');
-            let response = await fetch ("http://localhost:5000/contact",{
-                method:"POST",
-                headers:{
-                    "Content-Type": "Application/json;charset=utf-8",
-                },
-                body:JSON.stringify(formDetails),
-            });
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setButtonText('Sending...');
+        setTimeout(() => {
             setButtonText("Send");
-            let result = response.json();
             setFormDetails(formInitialDetails);
-            if(result.code === 200){
-                setStatus({success: true, message: 'Message sent successfully' });
-            }else{
-                setStatus({success: false, message: 'Failed to send message' });
-            }
-        };
+            setStatus({ success: true, message: 'Message sent successfully (simulated)' });
+        }, 2000); // Simula un retraso de 2 segundos
+    };
+    
 
     return(
         <section className="contact" id="connect">
@@ -64,13 +55,13 @@ export const Contact =()=>{
                             <input type="tel" value={formDetails.phone} placeholder="Phone" onChange={(e) => onFormUpdate('phone', e.target.value)}/>
                             </Col>
                             <Col>
-                              <textarea row="6" value={formDetails.message} placeholder="Message"  onChange={(e) => onFormUpdate('messagge', e.target.value)}/>
+                              <textarea row="6" value={formDetails.messagge} placeholder="Messagge"  onChange={(e) => onFormUpdate('messagge', e.target.value)}/>
                                 <button type='submit'>{buttonText}</button>
                             </Col>
                             {
-                                status.message &&
+                                status.messagge &&
                                 <Col>
-                                    <p className={status.succes === false? "danger":"succes"}>{status.message}</p>
+                                    <p className={status.succes === false? "danger":"succes"}>{status.messagge}</p>
                                 </Col>
                             }
                         </Row>
